@@ -93,6 +93,15 @@ h2 {
   letter-spacing: 8px;
 }
 
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
 p {
   font-family: "Muli Light";
   color: #ffffff;
@@ -135,6 +144,12 @@ p {
 
 .nav .social-links a:hover {
   color: #d61b1b;
+}
+
+@media screen and (max-width: 320px) {
+  .nav .social-links {
+    display: none !important;
+  }
 }
 
 /*----------------------------------------*/
@@ -257,6 +272,10 @@ p {
 .releases {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(black)), url("./inc/images/Concrete-013.jpg");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), black), url("./inc/images/Concrete-013.jpg");
+}
+
+.releases .release__item {
+  margin-bottom: 2rem;
 }
 
 .releases .release__info .social-links h6 {

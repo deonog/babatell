@@ -105,6 +105,15 @@ h2 {
   letter-spacing: 8px;
 }
 
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
 p {
   font-family: $muliLight;
   color: #ffffff;
@@ -146,6 +155,9 @@ p {
       &:hover {
         color: $primaryColor;
       }
+    }
+    @media screen and (max-width: 320px) {
+      display: none !important;
     }
   }
 }
@@ -270,6 +282,9 @@ p {
     url("./inc/images/Concrete-013.jpg");
 
   .release {
+    &__item {
+      margin-bottom: 2rem;
+    }
     &__info {
       .social-links {
         h6 {
