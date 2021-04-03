@@ -81,18 +81,6 @@ h6 {
   color: #ffffff;
 }
 
-h1 {
-  font-family: $muliBold;
-  letter-spacing: -10px;
-}
-
-h2 {
-  font-family: $muliSemiboldItalic;
-  text-shadow: 2px 2px #000000;
-  color: $primaryColor;
-  letter-spacing: 8px;
-}
-
 h3,
 h4,
 h5,
@@ -101,9 +89,20 @@ h6 {
 }
 
 h1 {
+  font-size: 4rem;
+  font-family: $muliBold;
   @media only screen and (min-width: $bootstrap-lg) {
     font-size: 10rem;
+    letter-spacing: -10px;
   }
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: $muliSemiboldItalic;
+  text-shadow: 2px 2px #000000;
+  color: $primaryColor;
+  letter-spacing: 8px;
 }
 
 p {
