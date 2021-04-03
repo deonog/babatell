@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BABATELL</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./inc/bootstrap/bootstrap.min.css" />
+    <script src="./inc/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body style="background: #000000">
+    <nav class="nav">
+      <div class="container">
+        <div
+          class="row d-flex justify-content-between align-items-center h-100"
+        >
+          <div class="logo">
+            <a class="text-uppercase" href="#">Babatell</a>
+          </div>
+          <div
+            class="social-links d-flex justify-content-center align-items-center"
+          >
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-spotify"></i></a>
+            <a href=""><i class="fab fa-apple"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-soundcloud"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrap release-section">
+      <!-- HEADER COUNTDOWN END -->
+      <header class="header header__countdown hide">
+        <div class="header__bg"></div>
+        <div class="container container-show h-100">
+          <div class="row">
+            <div class="col-12">
+              <div>
+                <div class="container-logo">
+                  <div>
+                    <p>Save the date</p>
+                    <hr />
+                    <span>16. November 2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row countdown">
+            <div class="col-sm-12 col-md-3">
+              <div
+                class="countdown__item d-flex align-items-center justify-content-center text-center"
+              >
+                <div class="days">
+                  <p><span id="days"></span></p>
+                  <p class="mb-0">Days</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div
+                class="countdown__item d-flex align-items-center justify-content-center text-center"
+              >
+                <div class="hours">
+                  <p><span id="hours"></span></p>
+                  <p class="mb-0">Hours</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div
+                class="countdown__item d-flex align-items-center justify-content-center text-center"
+              >
+                <div class="minutes">
+                  <p><span id="minutes"></span></p>
+                  <p class="mb-0">Minutes</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div
+                class="countdown__item d-flex align-items-center justify-content-center text-center"
+              >
+                <div class="seconds">
+                  <p><span id="seconds"></span></p>
+                  <p class="mb-0">Seconds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER COUNTDOWN END -->
+
+      <!-- HEADER RELEASE -->
+      <header class="header header__release show">
+        <div
+          class="container h-100 d-flex align-items-center align-items-lg-end justify-content-center"
+        >
+          <div class="row">
+            <div class="d-flex flex-column text-center align-items-center">
+              <h1 class="text-uppercase">Babatell</h1>
+              <h2 class="text-uppercase">Be your man OUT NOW</h2>
+              <div class="social-links d-flex align-items-center my-4">
+                <h6 class="text-uppercase">Listen now</h6>
+                <span class="mx-3">/</span>
+                <div
+                  class="social-links__inner d-flex justify-content-center align-items-center"
+                >
+                  <a href=""><i class="fab fa-spotify"></i></a>
+                  <a href=""><i class="fab fa-apple"></i></a>
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="cover">
+                <img
+                  class="img-fluid"
+                  src="./inc/images/babatell_cover.jpg"
+                  alt="cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER RELEASE END -->
+
+      <!-- VIDEO -->
+      <section class="video padding">
+        <div
+          class="container h-100 d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="row">
+            <div class="col-12 mb-5">
+              <h2 class="text-uppercase text-center">video</h2>
+            </div>
+          </div>
+          <div class="row w-100">
+            <iframe
+              src="https://www.youtube.com/embed/FAtv6gfMQqg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- VIDEO END -->
+
+      <!-- RELEASES -->
+      <section class="releases padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-5">
+              <h2 class="text-uppercase text-center">releases</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- RELEASE SINGLE -->
+            <div class="col-sm-6 col-lg-4 release">
+              <div class="release__inner">
+                <div class="cover mb-4">
+                  <img
+                    class="img-fluid"
+                    src="./inc/images/babatell_cover.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div
+                  class="release__info d-flex flex-column align-items-center"
+                >
+                  <h5 class="release__name text-uppercase mb-2">Be your man</h5>
+                  <h6 class="release__date text-uppercase mb-2">
+                    Feb 12, 2018
+                  </h6>
+                  <div class="social-links">
+                    <h6 class="text-uppercase mb-2">Listen now</h6>
+                    <div
+                      class="social-links__inner d-flex justify-content-center align-items-center"
+                    >
+                      <a href=""><i class="fab fa-spotify"></i></a>
+                      <a href=""><i class="fab fa-apple"></i></a>
+                      <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- RELEASE SINGLE END -->
+            <!-- RELEASE SINGLE -->
+            <div class="col-sm-6 col-lg-4 release">
+              <div class="release__inner">
+                <div class="cover mb-4">
+                  <img
+                    class="img-fluid"
+                    src="./inc/images/babatell_cover.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div
+                  class="release__info d-flex flex-column align-items-center"
+                >
+                  <h5 class="release__name text-uppercase mb-2">Be your man</h5>
+                  <h6 class="release__date text-uppercase mb-2">
+                    Feb 12, 2018
+                  </h6>
+                  <div class="social-links">
+                    <h6 class="text-uppercase mb-2">Listen now</h6>
+                    <div
+                      class="social-links__inner d-flex justify-content-center align-items-center"
+                    >
+                      <a href=""><i class="fab fa-spotify"></i></a>
+                      <a href=""><i class="fab fa-apple"></i></a>
+                      <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- RELEASE SINGLE END -->
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-uppercase mb-0">
+                &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Babatell. All work is protected by copyright.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- FOOTER -->
+    </div>
+    <!-- RELEASE SECTION END -->
+  </body>
+  <script src="./inc/bootstrap/bootstrap.min.js"></script>
+  <script>
+    /* Countdown timer */
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 20, 2021 22:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the elements
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        console.log("hi");
+      }
+    }, 1000);
+  </script>
+</html>

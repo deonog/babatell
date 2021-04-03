@@ -1,0 +1,296 @@
+/*
+Theme Name: Babatell Theme
+Theme URI: https://deonogbuokiri.com
+Author: Deon Ogbuokiri
+Description: Music Artist Theme
+Version: 1.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*----------------------------------------*/
+/*  VARIABLES SCSS
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*  BREAKPOINTS
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*  FONTS
+/*----------------------------------------*/
+@font-face {
+  font-family: "Muli Light";
+  src: url("inc/fonts/Muli-Light.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Muli Semibold";
+  src: url("inc/fonts/Muli-SemiBold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Muli Semibold Italic";
+  src: url("inc/fonts/Muli-Semi-BoldItalic.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Muli Bold";
+  src: url("inc/fonts/Muli-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+/*----------------------------------------*/
+/*  GLOBAL STYLES
+/*----------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: "Muli Bold";
+  letter-spacing: -10px;
+}
+
+h2 {
+  font-family: "Muli Semibold Italic";
+  text-shadow: 2px 2px #000000;
+  color: #d61b1b;
+  letter-spacing: 8px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Muli Semibold";
+}
+
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 10rem;
+  }
+}
+
+p {
+  font-family: "Muli Light";
+  color: #ffffff;
+}
+
+.padding {
+  padding: 4rem 0;
+}
+
+/*----------------------------------------*/
+/*  NAVBAR
+/*----------------------------------------*/
+.nav {
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  z-index: 99;
+  background: #000000;
+}
+
+.nav .logo a {
+  color: #ffffff;
+  font-family: "Muli Semibold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav .social-links a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  font-size: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.nav .social-links a:last-child {
+  margin-right: 0;
+}
+
+.nav .social-links a:hover {
+  color: #d61b1b;
+}
+
+/*----------------------------------------*/
+/*  HEADER
+/*----------------------------------------*/
+.header {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("./inc/images/babatell_cover.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.7;
+}
+
+.header__countdown__bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  background: url("./inc/images/babatell_cover.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.header__release .cover {
+  height: 240px;
+  width: 240px;
+  padding: 0.5rem;
+  background: #ffffff;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__release .cover {
+    height: 320px;
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header__release {
+    padding-bottom: 5rem;
+  }
+}
+
+.header .row {
+  position: relative;
+  z-index: 10;
+}
+
+.header .social-links span,
+.header .social-links h6 {
+  font-size: 1rem;
+  font-family: "Muli Semibold";
+}
+
+.header .social-links__inner a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  font-size: 1.75rem;
+  margin-right: 1.5rem;
+}
+
+.header .social-links__inner a:last-child {
+  margin-right: 0;
+}
+
+.header .social-links__inner a:hover {
+  color: #d61b1b;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*----------------------------------------*/
+/*  VIDEO
+/*----------------------------------------*/
+.video {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.9))), url("./inc/images/Concrete-013.jpg");
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.9)), url("./inc/images/Concrete-013.jpg");
+}
+
+.video iframe {
+  width: 100%;
+  height: 40vh;
+}
+
+@media only screen and (min-width: 992px) {
+  .video iframe {
+    height: 60vh;
+  }
+}
+
+/*----------------------------------------*/
+/*  RELEASES
+/*----------------------------------------*/
+.releases {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(black)), url("./inc/images/Concrete-013.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), black), url("./inc/images/Concrete-013.jpg");
+}
+
+.releases .release__info .social-links h6 {
+  color: #d61b1b;
+}
+
+.releases .release__info .social-links__inner a {
+  text-decoration: none;
+  color: #d61b1b;
+  display: block;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+
+.releases .release__info .social-links__inner a:last-child {
+  margin-right: 0;
+}
+
+.releases .release__info .social-links__inner a:hover {
+  color: #ffffff;
+}
+
+.releases .cover {
+  padding: 0.5rem;
+  background: #ffffff;
+}
+
+.countdown__item {
+  height: 100%;
+  background: grey;
+}
+
+/*----------------------------------------*/
+/*   FOOTER
+/*----------------------------------------*/
+.footer p {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=style.css.map */

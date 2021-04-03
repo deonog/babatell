@@ -1,0 +1,319 @@
+/*
+Theme Name: Babatell Theme
+Theme URI: https://deonogbuokiri.com
+Author: Deon Ogbuokiri
+Description: Music Artist Theme
+Version: 1.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*----------------------------------------*/
+/*  VARIABLES SCSS
+/*----------------------------------------*/
+
+$muliLight: "Muli Light";
+$muliSemibold: "Muli Semibold";
+$muliBold: "Muli Bold";
+$muliSemiboldItalic: "Muli Semibold Italic";
+
+$primaryColor: rgb(214, 27, 27);
+
+$transition: all 0.2s ease-in;
+
+$font-size-base: 16px;
+
+/*----------------------------------------*/
+/*  BREAKPOINTS
+/*----------------------------------------*/
+
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+$bootstrap-lg: 992px;
+$bootstrap-xl: 1200px;
+
+/*----------------------------------------*/
+/*  FONTS
+/*----------------------------------------*/
+
+@font-face {
+  font-family: "Muli Light";
+  src: url("inc/fonts/Muli-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Muli Semibold";
+  src: url("inc/fonts/Muli-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Muli Semibold Italic";
+  src: url("inc/fonts/Muli-Semi-BoldItalic.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Muli Bold";
+  src: url("inc/fonts/Muli-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/*----------------------------------------*/
+/*  GLOBAL STYLES
+/*----------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  transition: $transition;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: $muliBold;
+  letter-spacing: -10px;
+}
+
+h2 {
+  font-family: $muliSemiboldItalic;
+  text-shadow: 2px 2px #000000;
+  color: $primaryColor;
+  letter-spacing: 8px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: $muliSemibold;
+}
+
+h1 {
+  @media only screen and (min-width: $bootstrap-lg) {
+    font-size: 10rem;
+  }
+}
+
+p {
+  font-family: $muliLight;
+  color: #ffffff;
+}
+
+.padding {
+  padding: 4rem 0;
+}
+/*----------------------------------------*/
+/*  NAVBAR
+/*----------------------------------------*/
+
+.nav {
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  z-index: 99;
+  background: #000000;
+
+  .logo {
+    a {
+      color: #ffffff;
+      font-family: $muliSemibold;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+  }
+  .social-links {
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      display: block;
+      font-size: 1.25rem;
+      margin-right: 1.25rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  HEADER
+/*----------------------------------------*/
+
+.header {
+  height: 100vh;
+  box-sizing: border-box;
+  background: url("./inc/images/babatell_cover.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #ffffff;
+
+  &:after {
+    content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+  }
+
+  &__countdown {
+    &__bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      background: url("./inc/images/babatell_cover.jpg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: blur(10px);
+    }
+  }
+
+  &__release {
+    .cover {
+      height: 240px;
+      width: 240px;
+      padding: 0.5rem;
+      background: #ffffff;
+
+      @media only screen and (min-width: $bootstrap-lg) {
+        height: 320px;
+        width: 320px;
+      }
+    }
+    @media only screen and (min-width: $bootstrap-lg) {
+      padding-bottom: 5rem;
+    }
+  }
+
+  .row {
+    position: relative;
+    z-index: 10;
+  }
+
+  .social-links {
+    span,
+    h6 {
+      font-size: 1rem;
+      font-family: $muliSemibold;
+    }
+    &__inner {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        font-size: 1.75rem;
+        margin-right: 1.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*----------------------------------------*/
+/*  VIDEO
+/*----------------------------------------*/
+
+.video {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9)),
+    url("./inc/images/Concrete-013.jpg");
+
+  iframe {
+    width: 100%;
+    height: 40vh;
+    @media only screen and (min-width: $bootstrap-lg) {
+      height: 60vh;
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  RELEASES
+/*----------------------------------------*/
+
+.releases {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
+    url("./inc/images/Concrete-013.jpg");
+
+  .release {
+    &__info {
+      .social-links {
+        h6 {
+          color: $primaryColor;
+        }
+        &__inner {
+          a {
+            text-decoration: none;
+            color: $primaryColor;
+            display: block;
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            &:last-child {
+              margin-right: 0;
+            }
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cover {
+    padding: 0.5rem;
+    background: #ffffff;
+  }
+}
+
+.countdown {
+  &__item {
+    height: 100%;
+    background: grey;
+  }
+}
+
+/*----------------------------------------*/
+/*   FOOTER
+/*----------------------------------------*/
+
+.footer {
+  p {
+    font-size: 0.8rem;
+  }
+}
