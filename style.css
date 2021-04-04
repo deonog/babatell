@@ -81,13 +81,33 @@ h1 {
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 7rem;
+    line-height: 7rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   h1 {
-    font-size: 10rem;
+    font-size: 9rem;
     letter-spacing: -10px;
+    line-height: 9rem;
+  }
+}
+
+h1 span {
+  color: #d61b1b;
+}
+
+.header__countdown h1 {
+  color: #d61b1b;
+}
+
+.header__countdown h1 span {
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__countdown h1 {
+    letter-spacing: 0.5rem;
   }
 }
 
@@ -147,9 +167,10 @@ p {
 
 .nav .logo a {
   color: #ffffff;
-  font-family: "Muli Semibold";
+  font-family: "Muli Semibold Italic";
   font-size: 1.5rem;
   text-decoration: none;
+  letter-spacing: 0.1rem;
 }
 
 .nav .social-links a {
@@ -210,11 +231,15 @@ p {
   height: 100%;
 }
 
+.header .container-logo {
+  margin: 2.5rem 0;
+}
+
 .header .container-logo hr {
   background: #fff;
   color: #ffffff;
-  height: 20px;
-  width: 2px;
+  height: 32px;
+  width: 3px;
   margin: 0 12px;
 }
 
@@ -224,6 +249,23 @@ p {
 
 .header .container-logo span {
   font-family: "Muli Semibold";
+}
+
+.header .container-logo p,
+.header .container-logo span {
+  font-size: 1.25rem;
+  width: 49%;
+}
+
+.header .container-logo p {
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .container-logo p,
+  .header .container-logo span {
+    font-size: 1rem;
+  }
 }
 
 .header:after {
@@ -237,7 +279,7 @@ p {
   opacity: 0.7;
 }
 
-.header__countdown__bg {
+.header__bg {
   position: absolute;
   left: 0;
   right: 0;
@@ -386,7 +428,29 @@ p {
 
 .countdown__item {
   height: 100%;
-  background: grey;
+  background: #161515;
+  border-radius: 2px;
+}
+
+.countdown__item p {
+  font-family: "Muli Light";
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.countdown__item span {
+  font-size: 1.4rem;
+  font-family: "Muli Semibold";
+}
+
+@media only screen and (max-width: 768px) {
+  .countdown__item p,
+  .countdown__item span {
+    font-size: 1.25rem;
+  }
+  .countdown__item p {
+    font-size: 0.75rem;
+  }
 }
 
 /*----------------------------------------*/
