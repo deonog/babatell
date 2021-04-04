@@ -164,6 +164,10 @@ p {
   padding: 4rem 0;
 }
 
+.padding-2 {
+  padding: 6rem 0 4rem 0;
+}
+
 /*----------------------------------------*/
 /*  NAVBAR
 /*----------------------------------------*/
@@ -399,15 +403,9 @@ p {
 /*  SCROLL DOWN BTN
 /*----------------------------------------*/
 .down-link-wrap {
-  display: none;
-}
-
-@media only screen and (min-width: 1400px) {
-  .down-link-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .down-link {
@@ -424,6 +422,8 @@ p {
 
 .down-link a {
   font-size: 0.9rem;
+  position: static;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -433,7 +433,6 @@ p {
     z-index: 10;
     right: 2rem;
     bottom: 10rem;
-    text-decoration: none;
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
   }
