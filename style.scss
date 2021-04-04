@@ -419,6 +419,21 @@ p {
   }
 }
 
+.header__release {
+  .down-link {
+    a {
+      @media only screen and (min-width: $bootstrap-md) {
+        letter-spacing: 1px;
+        position: absolute;
+        z-index: 10;
+        right: 2rem;
+        bottom: 10rem;
+        transform: rotate(270deg);
+      }
+    }
+  }
+}
+
 /*----------------------------------------*/
 /*  VIDEO
 /*----------------------------------------*/

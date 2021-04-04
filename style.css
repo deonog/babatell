@@ -452,6 +452,18 @@ p {
   font-size: 1.2em;
 }
 
+@media only screen and (min-width: 768px) {
+  .header__release .down-link a {
+    letter-spacing: 1px;
+    position: absolute;
+    z-index: 10;
+    right: 2rem;
+    bottom: 10rem;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
 /*----------------------------------------*/
 /*  VIDEO
 /*----------------------------------------*/
