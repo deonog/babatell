@@ -1,51 +1,37 @@
-const menu = document.querySelector(".links-container");
-const menuBtn = document.getElementById("menu-btn");
-const overlay = document.querySelector(".overlay");
-const closeBtn = document.getElementById("menu-close-btn");
-const spanAll = document.querySelectorAll("#menu-btn span");
-const span = document.querySelector("#menu-btn span:first-child");
-const spanTwo = document.querySelector("#menu-btn span:nth-child(2)");
-const spanThree = document.querySelector("#menu-btn span:last-child");
-const nav = document.querySelector("nav");
-const linksContainer = document.querySelector(".links-container");
-const links = document.querySelectorAll("nav a");
-const navbar = document.getElementById("nav");
-const topLink = document.querySelector(".top-link");
-const header = document.querySelector("header");
-const hover = document.querySelector(".links-container a:hover");
-
 // ------------------------------------------------------------------------------ //
-// Menu Button
+// Preloader
 // ------------------------------------------------------------------------------ //
 
-menuBtn.addEventListener("click", function () {
-  menu.classList.toggle("menu-open");
-  overlay.classList.toggle("overlay-visible");
-  span.classList.toggle("menu-btn-open");
-  spanTwo.classList.toggle("menu-btn-open-2");
-  spanThree.classList.toggle("menu-close");
+jQuery(window).on("load", function () {
+  if (jQuery(".pre-loader-wrap").length > 0) {
+    jQuery(".pre-loader-wrap").fadeOut("slow");
+  }
 });
 
-// ------------------------------------------------------------------------------ //
-// Dynamic Copyright Date
-// ------------------------------------------------------------------------------ //
+// Smooth Scroll
 
-$(document).ready(function () {
-  const dateElement = document.getElementById("copyright-date");
+jQuery(document).ready(function ($) {
+  window.scroll({
+    left: 0,
+    behavior: "smooth",
+  });
 
-  function updateDate() {
-    const date = new Date().getFullYear();
-    dateElement.innerHTML = date;
-  }
+  $(".smooth-goto").click(function () {
+    $("html, body").animate(
+      { scrollTop: $(this.hash).offset().top - 50 },
+      1000
+    );
+    return false;
+  });
 
-  // setup back to top link
   window.addEventListener("scroll", function () {
     const scrollHeight = window.pageYOffset;
+    // setup back to top link
 
     if (scrollHeight > 300) {
-      topLink.classList.add("show-link");
+      $(".top-link").addClass("show-link");
     } else {
-      topLink.classList.remove("show-link");
+      $(".top-link").removeClass("show-link");
     }
   });
 });

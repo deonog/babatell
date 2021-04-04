@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body style="background: #000000">
+    <!-- NAVBAR -->
     <nav class="nav">
       <div class="container">
         <div
@@ -34,10 +35,11 @@
         </div>
       </div>
     </nav>
+    <!-- NAVBAR END -->
 
     <div class="wrap">
       <!-- HEADER COUNTDOWN END -->
-      <header class="header header__countdown show">
+      <header class="header header__countdown">
         <div class="header__bg"></div>
         <div class="container h-100 d-flex flex-column justify-content-center">
           <div class="row">
@@ -105,13 +107,13 @@
       <!-- HEADER COUNTDOWN END -->
 
       <!-- HEADER RELEASE -->
-      <header class="header header__release hide">
+      <header class="header header__release">
         <div
           class="container h-100 d-flex align-items-center align-items-lg-end justify-content-center"
         >
           <div class="row">
             <div class="d-flex flex-column text-center align-items-center">
-              <h1 class="text-uppercase mb-3 mb-lg-0">Babatell</h1>
+              <h1 class="text-uppercase mb-4 mb-lg-2">Babatell</h1>
               <h2 class="text-uppercase">Be your man OUT NOW</h2>
               <div class="social-links d-flex align-items-center my-4">
                 <h6 class="text-uppercase">Listen now</h6>
@@ -235,6 +237,38 @@
         </div>
       </section>
 
+      <!-- SCROLL UP BTN -->
+      <a
+        class="scroll-link top-link smooth-goto d-flex align-items-center justify-content-center"
+        href="#home"
+      >
+        <i class="fas fa-caret-up"></i>
+      </a>
+      <!-- SCROLL UP BTN END -->
+
+      <!-- PRE-LOADER -->
+      <div class="pre-loader-wrap">
+        <div class="loading">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!-- PRE-LOADER END -->
+
       <!-- FOOTER -->
       <footer class="footer py-5">
         <div class="container">
@@ -256,39 +290,57 @@
     <!-- RELEASE SECTION END -->
   </body>
   <script src="./inc/bootstrap/bootstrap.min.js"></script>
+  <script src="./inc/js/script.js"></script>
   <script>
-    /* Countdown timer */
+    jQuery(document).ready(function ($) {
+      /* Countdown timer */
 
-    // Set the date we're counting down to
-    var countDownDate = new Date("Apr 20, 2021 22:00:00").getTime();
+      // Set the date we're counting down to
+      var countDownDate = new Date("April 20, 2020 22:00:00").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function () {
-      // Get today's date and time
-      var now = new Date().getTime();
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
 
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
 
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Display the result in the elements
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = seconds;
+        // Display the result in the elements
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
 
-      // If the count down is finished, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        console.log("hi");
-      }
-    }, 1000);
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          // Remove Countdown Header
+          jQuery(".header__countdown").addClass("hide");
+          jQuery(".header__countdown").removeClass("show");
+
+          // Add Release Header
+          jQuery(".header__release").addClass("show");
+          jQuery(".header__release").removeClass("hide");
+        } else if (distance > 0) {
+          clearInterval(x);
+          // Add Countdown Header
+          jQuery(".header__countdown").addClass("show");
+          jQuery(".header__countdown").removeClass("hide");
+
+          // Remove Release Header
+          jQuery(".header__release").addClass("hide");
+          jQuery(".header__release").removeClass("show");
+        }
+      }, 1000);
+    });
   </script>
 </html>
