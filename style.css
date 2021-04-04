@@ -78,6 +78,12 @@ h1 {
   font-family: "Muli Bold";
 }
 
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   h1 {
     font-size: 10rem;
@@ -86,11 +92,23 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-family: "Muli Semibold Italic";
   text-shadow: 2px 2px #000000;
   color: #d61b1b;
   letter-spacing: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 2.25rem;
+  }
 }
 
 h5 {
@@ -102,7 +120,7 @@ h5 {
     font-size: 3rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -168,6 +186,44 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   color: #ffffff;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.header .line {
+  background: #fff;
+  width: 2px;
+  height: 100%;
+}
+
+.header .container-logo hr {
+  background: #fff;
+  color: #ffffff;
+  height: 20px;
+  width: 2px;
+  margin: 0 12px;
+}
+
+.header .container-logo p {
+  font-family: "Muli Light";
+}
+
+.header .container-logo span {
+  font-family: "Muli Semibold";
 }
 
 .header:after {
@@ -261,7 +317,7 @@ p {
 
 .video iframe {
   width: 100%;
-  height: 45vh;
+  height: 40vh;
 }
 
 @media only screen and (min-width: 992px) {
@@ -282,16 +338,23 @@ p {
   margin-bottom: 2.5rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .releases .release__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .releases .release__info .social-links h6 {
   color: #d61b1b;
 }
 
 .releases .release__info .social-links__inner a {
   text-decoration: none;
+  text-align: center;
   color: #d61b1b;
   display: block;
-  font-size: 1.5rem;
-  margin-right: 1.25rem;
+  font-size: 2.25rem;
+  margin-right: 2rem;
 }
 
 .releases .release__info .social-links__inner a:last-child {
@@ -300,6 +363,20 @@ p {
 
 .releases .release__info .social-links__inner a:hover {
   color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .releases .release__info .social-links__inner a {
+    font-size: 2rem;
+    margin-right: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .releases .release__info .social-links__inner a {
+    font-size: 1.75rem;
+    margin-right: 1.5rem;
+  }
 }
 
 .releases .cover {

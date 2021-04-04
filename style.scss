@@ -91,6 +91,9 @@ h6 {
 h1 {
   font-size: 4rem;
   font-family: $muliBold;
+  @media only screen and (min-width: $bootstrap-md) {
+    font-size: 7rem;
+  }
   @media only screen and (min-width: $bootstrap-lg) {
     font-size: 10rem;
     letter-spacing: -10px;
@@ -98,11 +101,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-family: $muliSemiboldItalic;
   text-shadow: 2px 2px #000000;
   color: $primaryColor;
   letter-spacing: 8px;
+  @media only screen and (min-width: $bootstrap-md) {
+    font-size: 2rem;
+  }
+  @media only screen and (min-width: $bootstrap-lg) {
+    font-size: 2.25rem;
+  }
 }
 
 h5 {
@@ -114,7 +123,7 @@ h5 {
     font-size: 3rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -178,6 +187,38 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   color: #ffffff;
+
+  h2 {
+    font-size: 1.5rem;
+    @media only screen and (min-width: $bootstrap-md) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: $bootstrap-lg) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .line {
+    background: #fff;
+    width: 2px;
+    height: 100%;
+  }
+
+  .container-logo {
+    hr {
+      background: #fff;
+      color: #ffffff;
+      height: 20px;
+      width: 2px;
+      margin: 0 12px;
+    }
+    p {
+      font-family: $muliLight;
+    }
+    span {
+      font-family: $muliSemibold;
+    }
+  }
 
   &:after {
     content: ""; // ::before and ::after both require content
@@ -270,7 +311,7 @@ p {
 
   iframe {
     width: 100%;
-    height: 45vh;
+    height: 40vh;
     @media only screen and (min-width: $bootstrap-lg) {
       height: 60vh;
     }
@@ -288,6 +329,11 @@ p {
   .release {
     &__item {
       margin-bottom: 2.5rem;
+      @media only screen and (max-width: $bootstrap-md) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
     &__info {
       .social-links {
@@ -297,15 +343,24 @@ p {
         &__inner {
           a {
             text-decoration: none;
+            text-align: center;
             color: $primaryColor;
             display: block;
-            font-size: 1.5rem;
-            margin-right: 1.25rem;
+            font-size: 2.25rem;
+            margin-right: 2rem;
             &:last-child {
               margin-right: 0;
             }
             &:hover {
               color: #ffffff;
+            }
+            @media only screen and (min-width: $bootstrap-md) {
+              font-size: 2rem;
+              margin-right: 1.75rem;
+            }
+            @media only screen and (min-width: $bootstrap-lg) {
+              font-size: 1.75rem;
+              margin-right: 1.5rem;
             }
           }
         }
