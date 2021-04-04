@@ -56,6 +56,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   transition: all 0.2s ease-in;
 }
 
+body {
+  background: #000000;
+}
+
 h1,
 h2,
 h3,
@@ -74,22 +78,30 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   font-family: "Muli Bold";
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 7rem;
-    line-height: 7rem;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    letter-spacing: -1px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1400px) {
   h1 {
-    font-size: 9rem;
-    letter-spacing: -3px;
-    line-height: 9rem;
+    font-size: 7rem;
+    line-height: 7rem;
   }
 }
 
@@ -103,12 +115,6 @@ h1 span {
 
 .header__countdown h1 span {
   color: #ffffff;
-}
-
-@media only screen and (min-width: 992px) {
-  .header__countdown h1 {
-    letter-spacing: 0.5rem;
-  }
 }
 
 h2 {
@@ -196,33 +202,6 @@ p {
 }
 
 /*----------------------------------------*/
-/*  SCROLL TO TOP
-/*----------------------------------------*/
-.top-link {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border: 1px solid #d61b1b;
-  color: #000000;
-  background: #ffffff;
-  visibility: hidden;
-  z-index: -4;
-}
-
-.top-link i {
-  color: #d61b1b;
-  font-size: 1.2em;
-}
-
-.show-link {
-  visibility: visible;
-  z-index: 99;
-}
-
-/*----------------------------------------*/
 /*  HEADER
 /*----------------------------------------*/
 .header {
@@ -266,31 +245,66 @@ p {
   background: #fff;
   color: #ffffff;
   height: 32px;
-  width: 3px;
+  width: 2px;
   margin: 0 12px;
+  display: none;
 }
 
 .header .container-logo p {
   font-family: "Muli Light";
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.header .container-logo p:last-child {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .container-logo p {
+    text-align: center;
+  }
 }
 
 .header .container-logo span {
-  font-family: "Muli Semibold";
+  font-size: 1.25rem;
 }
 
 .header .container-logo p,
 .header .container-logo span {
-  font-size: 1.25rem;
   width: 49%;
-}
-
-.header .container-logo p {
-  text-align: right;
 }
 
 @media only screen and (max-width: 768px) {
   .header .container-logo p,
   .header .container-logo span {
+    font-size: 1rem;
+  }
+}
+
+.header .container-logo .release__text {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Muli Semibold";
+  padding: 4px 6px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .container-logo .release__text {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+.header .container-logo .release__title {
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .container-logo .release__title {
+    text-align: center;
     font-size: 1rem;
   }
 }
@@ -377,6 +391,64 @@ p {
 }
 
 /*----------------------------------------*/
+/*  SCROLL DOWN BTN
+/*----------------------------------------*/
+.down-link-wrap {
+  display: none;
+}
+
+@media only screen and (min-width: 1400px) {
+  .down-link-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.down-link {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.down-link p {
+  color: #ffffff;
+}
+
+.down-link a {
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .down-link a {
+    letter-spacing: 1px;
+    position: absolute;
+    z-index: 10;
+    right: 2rem;
+    bottom: 10rem;
+    text-decoration: none;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+.down-link .scroll-link {
+  height: 2rem;
+  width: 2rem;
+  place-items: center;
+  border: 1px solid #d61b1b;
+  color: #000000;
+  background: #ffffff;
+}
+
+.down-link .scroll-link i {
+  color: #d61b1b;
+  font-size: 1.2em;
+}
+
+/*----------------------------------------*/
 /*  VIDEO
 /*----------------------------------------*/
 .video {
@@ -456,7 +528,6 @@ p {
 .countdown__item {
   height: 100%;
   background: #161515;
-  border-radius: 2px;
 }
 
 .countdown__item p {
@@ -485,6 +556,34 @@ p {
 /*----------------------------------------*/
 .footer p {
   font-size: 0.8rem;
+}
+
+/*----------------------------------------*/
+/*  SCROLL TO TOP
+/*----------------------------------------*/
+.top-link {
+  text-decoration: none !important;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid #d61b1b;
+  color: #000000;
+  background: #d61b1b;
+  visibility: hidden;
+  z-index: -4;
+}
+
+.top-link i {
+  color: #000000;
+  font-size: 1.2em;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 99;
 }
 
 /*----------------------------------------*/

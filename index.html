@@ -13,7 +13,7 @@
     <script src="./inc/js/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-  <body style="background: #000000">
+  <body id="home">
     <!-- NAVBAR -->
     <nav class="nav">
       <div class="container">
@@ -21,16 +21,26 @@
           class="row d-flex justify-content-between align-items-center h-100 h-100 m-0"
         >
           <div class="logo">
-            <a class="text-uppercase" href="#">Babatell</a>
+            <a class="text-uppercase smooth-goto" href="#home">Babatell</a>
           </div>
           <div
             class="social-links d-flex justify-content-center align-items-center"
           >
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-spotify"></i></a>
-            <a href=""><i class="fab fa-apple"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-            <a href=""><i class="fab fa-soundcloud"></i></a>
+            <a href="" target="_blank" rel="noopener"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="" target="_blank" rel="noopener"
+              ><i class="fab fa-spotify"></i
+            ></a>
+            <a href="" target="_blank" rel="noopener"
+              ><i class="fab fa-apple"></i
+            ></a>
+            <a href="" target="_blank" rel="noopener"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="" target="_blank" rel="noopener"
+              ><i class="fab fa-soundcloud"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -46,16 +56,18 @@
             <div class="col-12">
               <div>
                 <h1 class="text-uppercase mb-lg-0 text-center">
-                  <span>babatell:</span> New EP release
+                  <span>babatell:</span><br />
+                  New EP release
                 </h1>
                 <div
                   class="container-logo d-flex justify-content-center align-items-center"
                 >
-                  <p class="mb-0 text-uppercase">release date</p>
-                  <div class="hr-wrap">
-                    <hr />
-                  </div>
-                  <span class="text-uppercase">16. November 2019</span>
+                  <p class="mb-0 mr-3 text-uppercase">
+                    <span class="release__title">release date</span>
+                  </p>
+                  <p class="mb-0 text-uppercase">
+                    <span class="release__text">16. November 2019</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -102,6 +114,18 @@
               </div>
             </div>
           </div>
+          <!-- SCROLL DOWN BTN -->
+          <div
+            class="down-link-wrap down-link align-items-center justify-content-center pb-4"
+          >
+            <a
+              class="smooth-goto align-items-center justify-content-center"
+              href="#releases"
+            >
+              <p class="text-uppercase mb-0 mr-2">scroll down</p>
+            </a>
+          </div>
+          <!-- SCROLL DOWN BTN END -->
         </div>
       </header>
       <!-- HEADER COUNTDOWN END -->
@@ -121,9 +145,15 @@
                 <div
                   class="social-links__inner d-flex justify-content-center align-items-center"
                 >
-                  <a href=""><i class="fab fa-spotify"></i></a>
-                  <a href=""><i class="fab fa-apple"></i></a>
-                  <a href=""><i class="fab fa-youtube"></i></a>
+                  <a href="" target="_blank" rel="noopener"
+                    ><i class="fab fa-spotify"></i
+                  ></a>
+                  <a href="" target="_blank" rel="noopener"
+                    ><i class="fab fa-apple"></i
+                  ></a>
+                  <a href="" target="_blank" rel="noopener"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
                 </div>
               </div>
               <div class="cover">
@@ -140,7 +170,7 @@
       <!-- HEADER RELEASE END -->
 
       <!-- VIDEO -->
-      <section class="video padding">
+      <section class="video padding" id="video">
         <div
           class="container h-100 d-flex flex-column align-items-center justify-content-center"
         >
@@ -163,7 +193,7 @@
       <!-- VIDEO END -->
 
       <!-- RELEASES -->
-      <section class="releases padding">
+      <section class="releases padding" id="releases">
         <div class="container">
           <div class="row">
             <div class="col-12 mb-5">
@@ -193,9 +223,15 @@
                     <div
                       class="social-links__inner d-flex justify-content-center align-items-center"
                     >
-                      <a href=""><i class="fab fa-spotify"></i></a>
-                      <a href=""><i class="fab fa-apple"></i></a>
-                      <a href=""><i class="fab fa-youtube"></i></a>
+                      <a href="" target="_blank" rel="noopener"
+                        ><i class="fab fa-spotify"></i
+                      ></a>
+                      <a href="" target="_blank" rel="noopener"
+                        ><i class="fab fa-apple"></i
+                      ></a>
+                      <a href="" target="_blank" rel="noopener"
+                        ><i class="fab fa-youtube"></i
+                      ></a>
                     </div>
                   </div>
                 </div>
@@ -224,9 +260,15 @@
                     <div
                       class="social-links__inner d-flex justify-content-center align-items-center"
                     >
-                      <a href=""><i class="fab fa-spotify"></i></a>
-                      <a href=""><i class="fab fa-apple"></i></a>
-                      <a href=""><i class="fab fa-youtube"></i></a>
+                      <a href="" target="_blank" rel="noopener"
+                        ><i class="fab fa-spotify"></i
+                      ></a>
+                      <a href="" target="_blank" rel="noopener"
+                        ><i class="fab fa-apple"></i
+                      ></a>
+                      <a href="" target="_blank" rel="noopener"
+                        ><i class="fab fa-youtube"></i
+                      ></a>
                     </div>
                   </div>
                 </div>
@@ -293,54 +335,9 @@
   <script src="./inc/js/script.js"></script>
   <script>
     jQuery(document).ready(function ($) {
-      /* Countdown timer */
-
       // Set the date we're counting down to
-      var countDownDate = new Date("April 20, 2020 22:00:00").getTime();
-
-      // Update the count down every 1 second
-      var x = setInterval(function () {
-        // Get today's date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the result in the elements
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
-
-        // If the count down is finished, write some text
-        if (distance < 0) {
-          clearInterval(x);
-          // Remove Countdown Header
-          jQuery(".header__countdown").addClass("hide");
-          jQuery(".header__countdown").removeClass("show");
-
-          // Add Release Header
-          jQuery(".header__release").addClass("show");
-          jQuery(".header__release").removeClass("hide");
-        } else if (distance > 0) {
-          clearInterval(x);
-          // Add Countdown Header
-          jQuery(".header__countdown").addClass("show");
-          jQuery(".header__countdown").removeClass("hide");
-
-          // Remove Release Header
-          jQuery(".header__release").addClass("hide");
-          jQuery(".header__release").removeClass("show");
-        }
-      }, 1000);
+      var countDownDate = new Date("April 20, 2021").getTime();
+      updateCountdown(countDownDate);
     });
   </script>
 </html>

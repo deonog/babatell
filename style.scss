@@ -71,6 +71,10 @@ $bootstrap-xl: 1200px;
   transition: $transition;
 }
 
+body {
+  background: #000000;
+}
+
 h1,
 h2,
 h3,
@@ -89,16 +93,21 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   font-family: $muliBold;
+  @media only screen and (max-width: 320px) {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
   @media only screen and (min-width: $bootstrap-md) {
+    font-size: 5rem;
+    line-height: 5.5rem;
+    letter-spacing: -1px;
+  }
+  @media only screen and (min-width: 1400px) {
     font-size: 7rem;
     line-height: 7rem;
-  }
-  @media only screen and (min-width: $bootstrap-lg) {
-    font-size: 9rem;
-    letter-spacing: -3px;
-    line-height: 9rem;
   }
   span {
     color: $primaryColor;
@@ -110,9 +119,6 @@ h1 {
     color: $primaryColor;
     span {
       color: #ffffff;
-    }
-    @media only screen and (min-width: $bootstrap-lg) {
-      letter-spacing: 0.5rem;
     }
   }
 }
@@ -152,6 +158,7 @@ p {
 .padding {
   padding: 4rem 0;
 }
+
 /*----------------------------------------*/
 /*  NAVBAR
 /*----------------------------------------*/
@@ -194,33 +201,6 @@ p {
 }
 
 /*----------------------------------------*/
-/*  SCROLL TO TOP
-/*----------------------------------------*/
-
-.top-link {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border: 1px solid $primaryColor;
-  color: #000000;
-  background: #ffffff;
-  visibility: hidden;
-  z-index: -4;
-  i {
-    color: $primaryColor;
-    font-size: 1.2em;
-  }
-}
-
-.show-link {
-  visibility: visible;
-  z-index: 99;
-}
-
-/*----------------------------------------*/
 /*  HEADER
 /*----------------------------------------*/
 
@@ -255,26 +235,53 @@ p {
       background: #fff;
       color: #ffffff;
       height: 32px;
-      width: 3px;
+      width: 2px;
       margin: 0 12px;
+      display: none;
     }
     p {
       font-family: $muliLight;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+      text-align: right;
+
+      &:last-child {
+        text-align: left;
+      }
+      @media only screen and (max-width: $bootstrap-md) {
+        text-align: center;
+      }
     }
     span {
-      font-family: $muliSemibold;
+      font-size: 1.25rem;
     }
     p,
     span {
-      font-size: 1.25rem;
       width: 49%;
-    }
-    p {
-      text-align: right;
     }
     @media only screen and (max-width: $bootstrap-md) {
       p,
       span {
+        font-size: 1rem;
+      }
+    }
+
+    .release__text {
+      background: #ffffff;
+      color: #000000;
+      font-family: $muliSemibold;
+      padding: 4px 6px;
+      @media only screen and (max-width: $bootstrap-md) {
+        text-align: center;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .release__title {
+      font-size: 1.6rem;
+      @media only screen and (max-width: $bootstrap-md) {
+        text-align: center;
         font-size: 1rem;
       }
     }
@@ -360,6 +367,52 @@ p {
 }
 
 /*----------------------------------------*/
+/*  SCROLL DOWN BTN
+/*----------------------------------------*/
+
+.down-link-wrap {
+  display: none;
+  @media only screen and (min-width: 1400px) {
+    display: flex;
+  }
+}
+
+.down-link {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  p {
+    color: #ffffff;
+  }
+  a {
+    font-size: 0.9rem;
+    @media only screen and (min-width: $bootstrap-xl) {
+      letter-spacing: 1px;
+      position: absolute;
+      z-index: 10;
+      right: 2rem;
+      bottom: 10rem;
+      text-decoration: none;
+      transform: rotate(270deg);
+    }
+  }
+  .scroll-link {
+    height: 2rem;
+    width: 2rem;
+    place-items: center;
+    border: 1px solid $primaryColor;
+    color: #000000;
+    background: #ffffff;
+    i {
+      color: $primaryColor;
+      font-size: 1.2em;
+    }
+  }
+}
+
+/*----------------------------------------*/
 /*  VIDEO
 /*----------------------------------------*/
 
@@ -393,6 +446,7 @@ p {
         }
       }
     }
+
     &__info {
       .social-links {
         h6 {
@@ -436,7 +490,6 @@ p {
   &__item {
     height: 100%;
     background: rgb(22, 21, 21);
-    border-radius: 2px;
     p {
       font-family: $muliLight;
       font-size: 1.25rem;
@@ -466,6 +519,34 @@ p {
   p {
     font-size: 0.8rem;
   }
+}
+
+/*----------------------------------------*/
+/*  SCROLL TO TOP
+/*----------------------------------------*/
+
+.top-link {
+  text-decoration: none !important;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid $primaryColor;
+  color: #000000;
+  background: $primaryColor;
+  visibility: hidden;
+  z-index: -4;
+  i {
+    color: #000000;
+    font-size: 1.2em;
+  }
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 99;
 }
 
 /*----------------------------------------*/
