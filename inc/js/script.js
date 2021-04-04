@@ -67,7 +67,6 @@ function updateCountdown(countDownDate) {
       jQuery(".header__release").addClass("show");
       jQuery(".header__release").removeClass("hide");
     } else if (distance > 0) {
-      clearInterval(x);
       // Add Countdown Header
       jQuery(".header__countdown").addClass("show");
       jQuery(".header__countdown").removeClass("hide");
