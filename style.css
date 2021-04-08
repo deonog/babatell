@@ -77,10 +77,42 @@ h6 {
   font-family: "Muli Semibold";
 }
 
+.header__release h1 {
+  font-size: 10vh;
+  line-height: 10vh;
+}
+
+@media only screen and (max-width: 320px) {
+  .header__release h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .header__release h1 {
+    font-size: 13vh;
+    line-height: 13vh;
+  }
+}
+
+.header__release h2 {
+  font-size: 1.75rem;
+}
+
+.header__countdown h1 {
+  color: #d61b1b;
+}
+
+.header__countdown h1 span {
+  color: #ffffff;
+}
+
 h1 {
   font-size: 3rem;
   line-height: 3.5rem;
   font-family: "Muli Bold";
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 320px) {
@@ -107,14 +139,6 @@ h1 {
 
 h1 span {
   color: #d61b1b;
-}
-
-.header__countdown h1 {
-  color: #d61b1b;
-}
-
-.header__countdown h1 span {
-  color: #ffffff;
 }
 
 h2 {
@@ -358,9 +382,15 @@ p {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .header__release {
-    padding-bottom: 7rem;
+    padding-bottom: 5vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header__release {
+    padding-bottom: 10vh;
   }
 }
 
@@ -432,7 +462,7 @@ p {
     position: absolute;
     z-index: 10;
     right: 2rem;
-    bottom: 10rem;
+    bottom: 10vh;
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
   }
@@ -458,7 +488,7 @@ p {
     position: absolute;
     z-index: 10;
     right: 2rem;
-    bottom: 10rem;
+    bottom: 15vh;
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
   }
