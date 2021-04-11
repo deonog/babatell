@@ -241,10 +241,9 @@ p {
   height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("./inc/images/babatell_cover.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
   color: #ffffff;
 }
 
@@ -358,10 +357,9 @@ p {
   left: 0;
   right: 0;
   display: block;
-  background: url("./inc/images/babatell_cover.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
   width: 100%;
   height: 100%;
   -webkit-filter: blur(10px);
@@ -569,6 +567,11 @@ p {
 .releases .cover {
   padding: 0.5rem;
   background: #ffffff;
+}
+
+.releases .cover img {
+  width: 100%;
+  height: 100%;
 }
 
 .countdown__item {
